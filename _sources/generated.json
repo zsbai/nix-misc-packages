@@ -1,0 +1,137 @@
+{
+    "bbdown-linux-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bbdown-linux-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9Y4KGN8aWJN1QooK8n6mH1zpb/r2fRFfM11fm+6aNNw=",
+            "type": "url",
+            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.3/BBDown_1.6.3_20240814_linux-arm64.zip"
+        },
+        "version": "1.6.3"
+    },
+    "bbdown-linux-x64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bbdown-linux-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-7CM7fY1AscxER9rAW+ND9Tp1fcYFdDqICKuqjpfl0Q4=",
+            "type": "url",
+            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.3/BBDown_1.6.3_20240814_linux-x64.zip"
+        },
+        "version": "1.6.3"
+    },
+    "bbdown-osx-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bbdown-osx-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-TfhAFNgYvW3/KzZbhHZFNA6JVcRFD+llaI9Br4mji6o=",
+            "type": "url",
+            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.3/BBDown_1.6.3_20240814_osx-arm64.zip"
+        },
+        "version": "1.6.3"
+    },
+    "clair-obscur-fix": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "clair-obscur-fix",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-lJV+ujiSx/IkjLG5UcA54+3ucNscV2KBwOYnIlUMM2s=",
+            "type": "tarball",
+            "url": "https://codeberg.org/Lyall/ClairObscurFix/releases/download/0.0.15/ClairObscurFix_0.0.15.zip"
+        },
+        "version": "0.0.15"
+    },
+    "firefox-csshacks": {
+        "cargoLock": null,
+        "date": "2026-05-31",
+        "extract": null,
+        "name": "firefox-csshacks",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "f460dc79bedcb5cd077dfb8e14e9d46e1881c0e3",
+            "sha256": "sha256-EouTytS0ji/R7AfPsjhwGaMONmlxVpXCJIyPNpC7tOs=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/MrOtherGuy/firefox-csshacks.git"
+        },
+        "version": "f460dc79bedcb5cd077dfb8e14e9d46e1881c0e3"
+    },
+    "go-fast-note-sync": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "go-fast-note-sync",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "erichll",
+            "repo": "go-fast-note-sync",
+            "rev": "v1.0.0",
+            "sha256": "sha256-wgtzH5NdkzjXfYUIk9xvugv+QUTWxvlkhor6kkBYZsc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0"
+    },
+    "jellyfin-plugin-sso": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "jellyfin-plugin-sso",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-U7TA16j8ovPa7zhSDGskb1fuU2Icm4J7EJCCdcUmp+Q=",
+            "type": "tarball",
+            "url": "https://github.com/Buco7854/jellyfin-plugin-sso/releases/download/v4.0.0.6/sso-authentication_4.0.0.6.zip"
+        },
+        "version": "4.0.0.6"
+    },
+    "jellyfin-plugin-sso-src": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "jellyfin-plugin-sso-src",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Buco7854",
+            "repo": "jellyfin-plugin-sso",
+            "rev": "v4.0.0.6",
+            "sha256": "sha256-PgDjXTrMCpTKth/nVczBHUCAuaGn8ZWbTXY5yVH5A6M=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.0.0.6"
+    }
+}
