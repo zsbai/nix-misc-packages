@@ -51,7 +51,7 @@ stdenvNoCC.mkDerivation {
       genericName = "ROM Manager";
       comment = description;
       categories = [
-        "Utilities"
+        "Utility"
         "Game"
       ];
       startupWMClass = "clrmamepro";
