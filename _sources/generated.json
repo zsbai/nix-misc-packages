@@ -215,5 +215,35 @@
             "url": "https://github.com/shenlebantongying/rime_latex.git"
         },
         "version": "858f2abc645f0e459e468e98122470ce20b16b30"
+    },
+    "rime-wanxiang-flypy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rime-wanxiang-flypy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-f25HpNM6LsBVtN7XSTVIpmBthkvZL961o0SZYuOdsZ0=",
+            "type": "url",
+            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.2/rime-wanxiang-flypy-fuzhu.zip"
+        },
+        "version": "v15.14.2"
+    },
+    "rime-wanxiang-zrm": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rime-wanxiang-zrm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-+dbEvWnkMFI04kARWBG7BTIQ+w9vwu6zQMn6W40vAT8=",
+            "type": "url",
+            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.2/rime-wanxiang-zrm-fuzhu.zip"
+        },
+        "version": "v15.14.2"
     }
 }

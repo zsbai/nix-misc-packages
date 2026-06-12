@@ -132,4 +132,20 @@
     };
     date = "2025-04-03";
   };
+  rime-wanxiang-flypy = {
+    pname = "rime-wanxiang-flypy";
+    version = "v15.14.2";
+    src = fetchurl {
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.2/rime-wanxiang-flypy-fuzhu.zip";
+      sha256 = "sha256-f25HpNM6LsBVtN7XSTVIpmBthkvZL961o0SZYuOdsZ0=";
+    };
+  };
+  rime-wanxiang-zrm = {
+    pname = "rime-wanxiang-zrm";
+    version = "v15.14.2";
+    src = fetchurl {
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.2/rime-wanxiang-zrm-fuzhu.zip";
+      sha256 = "sha256-+dbEvWnkMFI04kARWBG7BTIQ+w9vwu6zQMn6W40vAT8=";
+    };
+  };
 }
