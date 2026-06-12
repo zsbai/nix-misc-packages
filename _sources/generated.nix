@@ -104,4 +104,32 @@
       sha256 = "sha256-ePoZAuAFk83DjybVpJMtpsITrYsQX2u1mqED29/zsag=";
     };
   };
+  rime-dieghv = {
+    pname = "rime-dieghv";
+    version = "1709bb786a144de7be2229755011fde9034457de";
+    src = fetchgit {
+      url = "https://github.com/kahaani/dieghv.git";
+      rev = "1709bb786a144de7be2229755011fde9034457de";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-rMViEO0nxNEjVZbHwB0e9vSpe5TfHV7CuJoouS84Pjg=";
+    };
+    date = "2019-02-11";
+  };
+  rime-latex = {
+    pname = "rime-latex";
+    version = "858f2abc645f0e459e468e98122470ce20b16b30";
+    src = fetchgit {
+      url = "https://github.com/shenlebantongying/rime_latex.git";
+      rev = "858f2abc645f0e459e468e98122470ce20b16b30";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-i8Rgze+tQhbE+nl+JSj09ILXeUvf6MOS9Eqsuqis1n0=";
+    };
+    date = "2025-04-03";
+  };
 }

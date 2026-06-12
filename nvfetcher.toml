@@ -39,3 +39,11 @@ fetch.github = "libnoname/noname"
 [rime-cantonese]
 src.github = "rime/rime-cantonese"
 fetch.github = "rime/rime-cantonese"
+
+[rime-dieghv]
+src.git = "https://github.com/kahaani/dieghv.git"
+fetch.git = "https://github.com/kahaani/dieghv.git"
+
+[rime-latex]
+src.git = "https://github.com/shenlebantongying/rime_latex.git"
+fetch.git = "https://github.com/shenlebantongying/rime_latex.git"

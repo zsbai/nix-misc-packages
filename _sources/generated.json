@@ -175,5 +175,45 @@
             "type": "github"
         },
         "version": "latest"
+    },
+    "rime-dieghv": {
+        "cargoLock": null,
+        "date": "2019-02-11",
+        "extract": null,
+        "name": "rime-dieghv",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "1709bb786a144de7be2229755011fde9034457de",
+            "sha256": "sha256-rMViEO0nxNEjVZbHwB0e9vSpe5TfHV7CuJoouS84Pjg=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/kahaani/dieghv.git"
+        },
+        "version": "1709bb786a144de7be2229755011fde9034457de"
+    },
+    "rime-latex": {
+        "cargoLock": null,
+        "date": "2025-04-03",
+        "extract": null,
+        "name": "rime-latex",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "858f2abc645f0e459e468e98122470ce20b16b30",
+            "sha256": "sha256-i8Rgze+tQhbE+nl+JSj09ILXeUvf6MOS9Eqsuqis1n0=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/shenlebantongying/rime_latex.git"
+        },
+        "version": "858f2abc645f0e459e468e98122470ce20b16b30"
     }
 }
