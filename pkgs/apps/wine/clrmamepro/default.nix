@@ -21,32 +21,35 @@ stdenvNoCC.mkDerivation {
   nativeBuildInputs = [
     pkgs.makeWrapper
     pkgs.copyDesktopItems
-  ];
-
-  buildInputs = [
-    winepkg
     pkgs.icoutils
   ];
+
+  dontConfigure = true;
+
+  buildPhase = ''
+    runHook preBuild
+
+    wrestool --extract --type=14 clrmameUI.exe > app.ico
+    icotool --extract --width=48 --height=48 --bit-depth=32 --output=clrmamepro.png app.ico
+
+    runHook postBuild
+  '';
 
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/opt/clrmamepro
-    cp -r * $out/opt/clrmamepro/
-
-
-    mkdir -p $out/share/icons/hicolor/48x48/apps
-    wrestool --extract --type=14 clrmameUI.exe > $out/opt/clrmamepro/app.ico
-    icotool -x $out/opt/clrmamepro/app.ico
-    cp app_6_48x48x32.png $out/share/icons/hicolor/48x48/apps/clrmamepro.png
+    install -m755 -d $out/libexec/clrmamepro
+    install -m755 clrmame.exe clrmameUI.exe wrapper.sh $out/libexec/clrmamepro
+    install -m644 7z.dll readme.md $out/libexec/clrmamepro
+    install -Dm644 clrmamepro.png $out/share/icons/hicolor/48x48/apps/clrmamepro.png
 
     mkdir -p $out/bin
 
     makeWrapper ${lib.getExe winepkg} $out/bin/clrmameUI \
-      --add-flags "$out/opt/clrmamepro/clrmameUI.exe"
+      --add-flags "$out/libexec/clrmamepro/clrmameUI.exe"
 
     makeWrapper ${lib.getExe winepkg} $out/bin/clrmame \
-      --add-flags "$out/opt/clrmamepro/clrmame.exe"
+      --add-flags "$out/libexec/clrmamepro/clrmame.exe"
 
     runHook postInstall
   '';
@@ -70,6 +73,8 @@ stdenvNoCC.mkDerivation {
   meta = {
     inherit description;
     license = lib.licenses.unfree;
+    mainProgram = "clrmameUI";
     platforms = [ "x86_64-linux" ];
+    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
   };
 }

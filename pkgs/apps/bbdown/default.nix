@@ -39,9 +39,8 @@ stdenv.mkDerivation {
   sourceRoot = ".";
 
   installPhase = ''
-    mkdir -p $out/bin $out/libexec
-    cp BBDown $out/libexec/BBDown
-    chmod +x $out/libexec/BBDown
+    mkdir -p $out/bin
+    install -Dm755 BBDown $out/libexec/BBDown
   ''
   + lib.optionalString stdenv.isLinux ''
     cat > $out/bin/BBDown <<EOF
@@ -59,9 +58,7 @@ stdenv.mkDerivation {
     chmod +x $out/bin/BBDown
   ''
   + lib.optionalString stdenv.isDarwin ''
-    mkdir -p $out/bin
-    cp BBDown $out/bin/BBDown
-    chmod +x $out/bin/BBDown
+    install -Dm755 BBDown $out/bin/BBDown
   '';
 
   meta = with lib; {
