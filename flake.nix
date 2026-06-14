@@ -3,6 +3,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpak = {
+      url = "github:nixpak/nixpak";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
   };
   outputs =
     inputs@{ flake-parts, ... }:
@@ -11,6 +16,9 @@
         "x86_64-linux"
         "aarch64-linux"
         "aarch64-darwin"
+      ];
+      imports = [
+        ./nixpaks
       ];
       perSystem =
         { pkgs, ... }:
