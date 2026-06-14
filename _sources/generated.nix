@@ -38,6 +38,14 @@
       sha256 = "sha256-lJV+ujiSx/IkjLG5UcA54+3ucNscV2KBwOYnIlUMM2s=";
     };
   };
+  dwproton = {
+    pname = "dwproton";
+    version = "dwproton-11.0-4";
+    src = fetchTarball {
+      url = "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-4/dwproton-11.0-4-x86_64.tar.xz";
+      sha256 = "sha256-t5dLTIN+KSCQIG8spzN6soOhfCnnc+OgBoQWBdtJQFM=";
+    };
+  };
   firefox-csshacks = {
     pname = "firefox-csshacks";
     version = "f460dc79bedcb5cd077dfb8e14e9d46e1881c0e3";

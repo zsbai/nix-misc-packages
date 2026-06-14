@@ -58,6 +58,20 @@
         },
         "version": "0.0.15"
     },
+    "dwproton": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dwproton",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "sha256": "sha256-t5dLTIN+KSCQIG8spzN6soOhfCnnc+OgBoQWBdtJQFM=",
+            "type": "tarball",
+            "url": "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-4/dwproton-11.0-4-x86_64.tar.xz"
+        },
+        "version": "dwproton-11.0-4"
+    },
     "firefox-csshacks": {
         "cargoLock": null,
         "date": "2026-05-31",

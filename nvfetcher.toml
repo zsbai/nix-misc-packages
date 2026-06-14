@@ -55,3 +55,7 @@ fetch.url = "https://github.com/amzxyz/rime_wanxiang/releases/download/$ver/rime
 [rime-wanxiang-flypy]
 src.github = "amzxyz/rime_wanxiang"
 fetch.url = "https://github.com/amzxyz/rime_wanxiang/releases/download/$ver/rime-wanxiang-flypy-fuzhu.zip"
+
+[dwproton]
+src.cmd = "curl -sSL https://dawn.wine/api/v1/repos/dawn-winery/dwproton/releases/latest | jq -r .tag_name"
+fetch.tarball = "https://dawn.wine/dawn-winery/dwproton/releases/download/$ver/$ver-x86_64.tar.xz"
