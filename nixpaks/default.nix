@@ -16,6 +16,8 @@ let
     in
     {
       discord = callNixPak ./discord.nix;
+      thunderbird = callNixPak ./thunderbird.nix;
+      firefox = callNixPak ./firefox.nix;
       qq = callNixPak ./qq.nix;
       materialgram = callNixPak ./materialgram.nix;
       ayugram-desktop = callNixPak ./ayugram-desktop.nix;
