@@ -68,5 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libnoname/noname";
     license = licenses.gpl3Only;
     platforms = platforms.linux ++ platforms.darwin;
+    sourceProvenance = [ sourceTypes.fromSource ];
   };
 })

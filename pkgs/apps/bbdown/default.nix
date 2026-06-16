@@ -67,5 +67,6 @@ stdenv.mkDerivation {
     license = licenses.mit;
     platforms = builtins.attrNames archMap;
     mainProgram = "BBDown";
+    sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
   };
 }

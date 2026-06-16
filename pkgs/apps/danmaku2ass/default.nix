@@ -19,5 +19,6 @@ pkgs.writeShellApplication {
     homepage = "https://github.com/m13253/danmaku2ass";
     platforms = lib.platforms.all;
     license = lib.licenses.gpl3Only;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

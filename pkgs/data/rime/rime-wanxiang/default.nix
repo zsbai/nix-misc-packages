@@ -46,6 +46,7 @@ let
         homepage = "https://amzxyz.github.io/";
         license = lib.licenses.cc-by-40;
         platforms = lib.platforms.all;
+        sourceProvenance = [ lib.sourceTypes.fromSource ];
       };
     };
 in

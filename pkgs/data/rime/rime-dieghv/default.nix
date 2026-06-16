@@ -31,5 +31,6 @@ stdenvNoCC.mkDerivation {
     license = lib.licenses.gpl3Only;
     homepage = "https://github.com/kahaani/dieghv";
     description = "潮语拼音输入法 (Rime schema for Teochew dialect)";
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

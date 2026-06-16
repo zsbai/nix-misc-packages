@@ -46,5 +46,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/test482/mpv-bilibili-sponsorblock";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
+    sourceProvenance = [ lib.sourceProvenance.fromSource ];
   };
 }

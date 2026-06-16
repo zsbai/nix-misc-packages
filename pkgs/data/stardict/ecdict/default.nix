@@ -8,5 +8,6 @@ fetchzip {
     description = "Free English to Chinese Dictionary Database";
     homepage = "https://github.com/skywind3000/ECDICT";
     license = lib.licenses.mit;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

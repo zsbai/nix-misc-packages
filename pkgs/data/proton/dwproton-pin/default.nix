@@ -26,6 +26,6 @@ stdenvNoCC.mkDerivation {
     homepage = "https://dawn.wine/dawn-winery/dwproton";
     license = licenses.bsd3;
     platforms = [ "x86_64-linux" ];
-    # maintainers = with maintainers; [ ];
+    sourceProvenance = [ sourceTypes.binaryBytecode ];
   };
 }

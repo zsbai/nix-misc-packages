@@ -40,6 +40,7 @@ let
       meta = {
         platform = lib.platforms.linux ++ lib.platforms.darwin;
         license = lib.licenses.unfree;
+        sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
       }
       // meta;
     };

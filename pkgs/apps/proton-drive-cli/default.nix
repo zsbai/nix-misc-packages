@@ -33,5 +33,6 @@ stdenv.mkDerivation rec {
     license = licenses.mit;
     mainProgram = "proton-drive-cli";
     platforms = [ "x86_64-linux" ];
+    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
   };
 }

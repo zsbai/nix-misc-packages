@@ -24,5 +24,6 @@ buildDotnetModule {
     homepage = "https://github.com/Buco7854/jellyfin-plugin-sso";
     license = lib.licenses.gpl3Only;
     platform = lib.platforms.linux;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

@@ -24,5 +24,6 @@ stdenvNoCC.mkDerivation {
     description = "Collection of userstyles affecting the browser";
     homepage = "https://github.com/MrOtherGuy/firefox-csshacks";
     license = lib.licenses.mpl20;
+    sourceProvenance = [ lib.sourceProvenance.fromSource ];
   };
 }

@@ -27,5 +27,6 @@ stdenvNoCC.mkDerivation {
       cc-by-40
       odbl
     ];
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

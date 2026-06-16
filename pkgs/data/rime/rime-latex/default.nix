@@ -33,5 +33,6 @@ stdenvNoCC.mkDerivation {
     description = "Rime input method schema for LaTeX";
     homepage = "https://github.com/shenlebantongying/rime_latex";
     license = licenses.gpl3Only;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }

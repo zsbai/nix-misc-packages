@@ -20,5 +20,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     mainProgram = "go-fast-note-sync";
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 })
