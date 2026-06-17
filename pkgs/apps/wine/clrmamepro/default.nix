@@ -17,6 +17,7 @@ stdenvNoCC.mkDerivation {
   src = pkgs.fetchzip {
     url = "https://mamedev.emulab.it/clrmamepro/binaries/clrmame_v${dlVersion}.zip";
     hash = "sha256-/smkK8n+gY/df4Ry3OmyYw9OupcbtczN69QiUwvB43g=";
+    stripRoot = false;
   };
   nativeBuildInputs = [
     pkgs.makeWrapper
