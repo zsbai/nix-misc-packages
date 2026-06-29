@@ -48,25 +48,25 @@
   };
   dwproton = {
     pname = "dwproton";
-    version = "dwproton-11.0-4";
+    version = "dwproton-11.0-5";
     src = fetchTarball {
-      url = "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-4/dwproton-11.0-4-x86_64.tar.xz";
-      sha256 = "sha256-t5dLTIN+KSCQIG8spzN6soOhfCnnc+OgBoQWBdtJQFM=";
+      url = "https://dawn.wine/dawn-winery/dwproton/releases/download/dwproton-11.0-5/dwproton-11.0-5-x86_64.tar.xz";
+      sha256 = "sha256-2x4xotJ2aJYbg+G2TDPqyU7uuoc/hZQon9CA6SFGin0=";
     };
   };
   firefox-csshacks = {
     pname = "firefox-csshacks";
-    version = "f460dc79bedcb5cd077dfb8e14e9d46e1881c0e3";
+    version = "e7b748bfa4572ddcc50cced16a524f5f75dc04f2";
     src = fetchgit {
       url = "https://github.com/MrOtherGuy/firefox-csshacks.git";
-      rev = "f460dc79bedcb5cd077dfb8e14e9d46e1881c0e3";
+      rev = "e7b748bfa4572ddcc50cced16a524f5f75dc04f2";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-EouTytS0ji/R7AfPsjhwGaMONmlxVpXCJIyPNpC7tOs=";
+      sha256 = "sha256-KTjiWPp/KUY99rff5gws+s6T8oC1o9a+Eqp+aKlrCWE=";
     };
-    date = "2026-05-31";
+    date = "2026-06-24";
   };
   go-fast-note-sync = {
     pname = "go-fast-note-sync";
@@ -161,18 +161,18 @@
   };
   rime-wanxiang-flypy = {
     pname = "rime-wanxiang-flypy";
-    version = "v15.14.3";
+    version = "v15.16.0";
     src = fetchurl {
-      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.3/rime-wanxiang-flypy-fuzhu.zip";
-      sha256 = "sha256-OHgnAVCi+Byfhy0CeRue126c5qhrgIA72356lVQFUts=";
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-flypy-fuzhu.zip";
+      sha256 = "sha256-JQDHUlidezQq1NIgwJzU9TkgolNSZqwQ2H/IjZ+I7TM=";
     };
   };
   rime-wanxiang-zrm = {
     pname = "rime-wanxiang-zrm";
-    version = "v15.14.3";
+    version = "v15.16.0";
     src = fetchurl {
-      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.14.3/rime-wanxiang-zrm-fuzhu.zip";
-      sha256 = "sha256-Y27ReMFDt5p/KlnVJsFAvv2vBZQCBeR4rL3Slt1d0mI=";
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-zrm-fuzhu.zip";
+      sha256 = "sha256-rFcJmu6VL3pd8YDx90E3jBIgPIjMox6yzSg7tbqz52c=";
     };
   };
   sts2-Quick-Restart = {
