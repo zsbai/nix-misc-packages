@@ -128,7 +128,7 @@
       repo = "rime-cantonese";
       rev = "latest";
       fetchSubmodules = false;
-      sha256 = "sha256-ePoZAuAFk83DjybVpJMtpsITrYsQX2u1mqED29/zsag=";
+      sha256 = "sha256-M2zFuhKAmSJ3X7zP0+itakhmuHqwtxZVOHS/fn+NSZo=";
     };
   };
   rime-dieghv = {
@@ -161,18 +161,18 @@
   };
   rime-wanxiang-flypy = {
     pname = "rime-wanxiang-flypy";
-    version = "v15.16.0";
+    version = "v16.0.1";
     src = fetchurl {
-      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-flypy-fuzhu.zip";
-      sha256 = "sha256-JQDHUlidezQq1NIgwJzU9TkgolNSZqwQ2H/IjZ+I7TM=";
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v16.0.1/rime-wanxiang-flypy-fuzhu.zip";
+      sha256 = "sha256-joXwFiVWSKUS0dTEL1uWQq8N8F4s77YEd7JaV5AQxSc=";
     };
   };
   rime-wanxiang-zrm = {
     pname = "rime-wanxiang-zrm";
-    version = "v15.16.0";
+    version = "v16.0.1";
     src = fetchurl {
-      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-zrm-fuzhu.zip";
-      sha256 = "sha256-rFcJmu6VL3pd8YDx90E3jBIgPIjMox6yzSg7tbqz52c=";
+      url = "https://github.com/amzxyz/rime_wanxiang/releases/download/v16.0.1/rime-wanxiang-zrm-fuzhu.zip";
+      sha256 = "sha256-FatHxejbLnIxy9JFLs2Ej2nmvAVJPpR4zcf0/d5m9SA=";
     };
   };
   sts2-Quick-Restart = {
