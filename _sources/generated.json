@@ -220,7 +220,7 @@
             "owner": "rime",
             "repo": "rime-cantonese",
             "rev": "latest",
-            "sha256": "sha256-ePoZAuAFk83DjybVpJMtpsITrYsQX2u1mqED29/zsag=",
+            "sha256": "sha256-M2zFuhKAmSJ3X7zP0+itakhmuHqwtxZVOHS/fn+NSZo=",
             "sparseCheckout": [],
             "type": "github"
         },
@@ -275,11 +275,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-JQDHUlidezQq1NIgwJzU9TkgolNSZqwQ2H/IjZ+I7TM=",
+            "sha256": "sha256-joXwFiVWSKUS0dTEL1uWQq8N8F4s77YEd7JaV5AQxSc=",
             "type": "url",
-            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-flypy-fuzhu.zip"
+            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v16.0.1/rime-wanxiang-flypy-fuzhu.zip"
         },
-        "version": "v15.16.0"
+        "version": "v16.0.1"
     },
     "rime-wanxiang-zrm": {
         "cargoLock": null,
@@ -290,11 +290,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-rFcJmu6VL3pd8YDx90E3jBIgPIjMox6yzSg7tbqz52c=",
+            "sha256": "sha256-FatHxejbLnIxy9JFLs2Ej2nmvAVJPpR4zcf0/d5m9SA=",
             "type": "url",
-            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v15.16.0/rime-wanxiang-zrm-fuzhu.zip"
+            "url": "https://github.com/amzxyz/rime_wanxiang/releases/download/v16.0.1/rime-wanxiang-zrm-fuzhu.zip"
         },
-        "version": "v15.16.0"
+        "version": "v16.0.1"
     },
     "sts2-Quick-Restart": {
         "cargoLock": null,
