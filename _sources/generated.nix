@@ -48,15 +48,15 @@
   };
   dump-tabs = {
     pname = "dump-tabs";
-    version = "450b3f61a3cabd2e9ef76bfa5639a19fdced3aa6";
+    version = "745e347bcf9a2bec87370a33d4929d07af09f011";
     src = fetchgit {
       url = "https://github.com/js0ny/dump-tabs.yazi.git";
-      rev = "450b3f61a3cabd2e9ef76bfa5639a19fdced3aa6";
+      rev = "745e347bcf9a2bec87370a33d4929d07af09f011";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Q5cRAyovD+KcbfFTr3pkX+IPeJpvlXh1l6bVSuHXTCE=";
+      sha256 = "sha256-Etx5LX9TuiGoxLe6eIH6pYM1wXzsqQ/uY6clq/AiusY=";
     };
     date = "2026-07-09";
   };
