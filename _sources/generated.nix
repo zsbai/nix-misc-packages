@@ -112,6 +112,17 @@
       sha256 = "sha256-PgDjXTrMCpTKth/nVczBHUCAuaGn8ZWbTXY5yVH5A6M=";
     };
   };
+  komari-agent = {
+    pname = "komari-agent";
+    version = "1.2.60";
+    src = fetchFromGitHub {
+      owner = "komari-monitor";
+      repo = "komari-agent";
+      rev = "1.2.60";
+      fetchSubmodules = false;
+      sha256 = "sha256-SsM/RbwdWmKty+6ueL4J9auKcPkRMNX59Imko3oPOiQ=";
+    };
+  };
   limes = {
     pname = "limes";
     version = "0cd6451c4558919ffeceec51f11b7fa8b912318e";

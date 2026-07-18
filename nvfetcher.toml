@@ -100,3 +100,7 @@ fetch.github = "pcherenkov/udpxy"
 src.git = "https://github.com/rozhuk-im/msd_lite.git"
 fetch.github = "rozhuk-im/msd_lite"
 git.fetchSubmodules = true
+
+[komari-agent]
+src.github = "komari-monitor/komari-agent"
+fetch.github = "komari-monitor/komari-agent"
