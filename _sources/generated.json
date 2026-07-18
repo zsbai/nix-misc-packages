@@ -224,6 +224,27 @@
         },
         "version": "v0.1.1"
     },
+    "msd_lite": {
+        "cargoLock": null,
+        "date": "2025-05-02",
+        "extract": null,
+        "name": "msd_lite",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rozhuk-im",
+            "repo": "msd_lite",
+            "rev": "79a6c62c8fced6128a5e445ee110709b3b51bb78",
+            "sha256": "sha256-OEpPlxJqsGrokyVvvACrZMV7wosY/RzFPBnqRr2lUIg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "79a6c62c8fced6128a5e445ee110709b3b51bb78"
+    },
     "noname": {
         "cargoLock": null,
         "date": null,
@@ -390,6 +411,27 @@
             "url": "https://github.com/erasels/StS2-Quick-Restart/releases/download/v1.2.1/QuickRestart.zip"
         },
         "version": "v1.2.1"
+    },
+    "udpxy": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "udpxy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pcherenkov",
+            "repo": "udpxy",
+            "rev": "1.0-25.2",
+            "sha256": "sha256-v+w4Y6MyJqUrgwuYUYTZW0Zn1jhW4vEpgBEQyEjvkzg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.0-25.2"
     },
     "wdotool": {
         "cargoLock": null,

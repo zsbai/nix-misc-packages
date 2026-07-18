@@ -137,6 +137,18 @@
       sha256 = "sha256-W3H/mHmXIdmfH8k2wFXfalF4W7WDQIDAW0wo11n3V04=";
     };
   };
+  msd_lite = {
+    pname = "msd_lite";
+    version = "79a6c62c8fced6128a5e445ee110709b3b51bb78";
+    src = fetchFromGitHub {
+      owner = "rozhuk-im";
+      repo = "msd_lite";
+      rev = "79a6c62c8fced6128a5e445ee110709b3b51bb78";
+      fetchSubmodules = true;
+      sha256 = "sha256-OEpPlxJqsGrokyVvvACrZMV7wosY/RzFPBnqRr2lUIg=";
+    };
+    date = "2025-05-02";
+  };
   noname = {
     pname = "noname";
     version = "v1.11.4.1";
@@ -234,6 +246,17 @@
     src = fetchTarball {
       url = "https://github.com/erasels/StS2-Quick-Restart/releases/download/v1.2.1/QuickRestart.zip";
       sha256 = "sha256-lELAlIGxm06jRmNYjfH4Fz5TBbShMd+bwYiUc15xr+Q=";
+    };
+  };
+  udpxy = {
+    pname = "udpxy";
+    version = "1.0-25.2";
+    src = fetchFromGitHub {
+      owner = "pcherenkov";
+      repo = "udpxy";
+      rev = "1.0-25.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-v+w4Y6MyJqUrgwuYUYTZW0Zn1jhW4vEpgBEQyEjvkzg=";
     };
   };
   wdotool = {

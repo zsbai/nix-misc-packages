@@ -91,3 +91,12 @@ fetch.git = "https://github.com/js0ny/dump-tabs.yazi.git"
 [wdotool]
 src.github = "cushycush/wdotool"
 fetch.github =  "cushycush/wdotool"
+
+[udpxy]
+src.github_tag = "pcherenkov/udpxy"
+fetch.github = "pcherenkov/udpxy"
+
+[msd_lite]
+src.git = "https://github.com/rozhuk-im/msd_lite.git"
+fetch.github = "rozhuk-im/msd_lite"
+git.fetchSubmodules = true

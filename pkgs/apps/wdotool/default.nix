@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage {
     ];
     mainProgram = "wdotool";
     platforms = lib.platforms.linux;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
   };
 }
