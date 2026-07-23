@@ -17,6 +17,8 @@ let
   releaseVersion = lib.concatStringsSep "." (lib.take 3 versionParts);
   majorVersion = lib.head versionParts;
 
+  # CCStudio is a prebuilt generic Linux application that expects these libraries in an FHS layout.
+  # buildFHSEnv maps the dependencies into /usr without modifying the upstream binaries.
   runtimePkgs =
     pkgs: with pkgs; [
       alsa-lib
@@ -60,10 +62,12 @@ let
       zlib
     ];
 
+  # The TI installer invokes service, but system services should not run in the build sandbox.
   serviceShim = writeShellScriptBin "service" ''
     exit 0
   '';
 
+  # Avoid the installer-generated desktop file because it contains build-time absolute paths.
   desktopItem = makeDesktopItem {
     name = "ccstudio";
     desktopName = "TI Code Composer Studio ${majorVersion}";
@@ -76,6 +80,8 @@ let
     ];
   };
 
+  # The installer requires root access to /etc/udev and depends on binutils.
+  # Use an isolated FHS environment so all writes remain inside the build sandbox.
   installerEnv = buildFHSEnv {
     name = "ccstudio-installer-env";
     targetPkgs = pkgs: [
@@ -91,6 +97,7 @@ let
     ];
   };
 
+  # Run the official TI installer to produce the complete CCStudio installation.
   ccstudio-unwrapped = stdenvNoCC.mkDerivation {
     pname = "ccstudio-unwrapped";
     inherit version;
@@ -105,6 +112,7 @@ let
     installPhase = ''
       runHook preInstall
 
+      # The installer filename includes its version, so locate it by its stable prefix.
       for installer in ccs_setup_*.run; do
         break
       done
@@ -113,6 +121,7 @@ let
         exit 1
       fi
 
+      # The installer modifies its directory and HOME, so copy it to keep the source read-only.
       installerDir="$TMPDIR/ccstudio-installer"
       installerHome="$TMPDIR/ccstudio-home"
       rm -rf "$installerDir" "$installerHome"
@@ -120,12 +129,14 @@ let
       cp -r . "$installerDir"
       chmod +x "$installerDir/$installer"
 
+      # Install only the C2000 component and print logs if unattended installation fails.
       if ! ${installerEnv}/bin/ccstudio-installer-env -c \
         "HOME=$installerHome $installerDir/$installer --mode unattended --prefix $out --enable-components PF_C28"; then
         find "$out" -type f -path '*/install_logs/*' -print -exec cat {} \; || true
         exit 1
       fi
 
+      # Remove uninstallers, logs, and generated desktop files that may expose build paths.
       rm -rf \
         "$out/CCS ${releaseVersion}.desktop" \
         "$out/ccs/install_info" \
@@ -135,6 +146,7 @@ let
         "$out/ccs/uninstallers" \
         "$out/ccs/ccs_base/emulation/Blackhawk/Install/bh_emulation_install.log"
 
+      # Normalize build-time log paths and timings in upstream caches for reproducibility.
       ibLogfile=$(grep -m1 '^ib_logfile=' "$out/ccs/eclipse/ccs.properties")
       substituteInPlace "$out/ccs/eclipse/ccs.properties" \
         --replace-fail "$ibLogfile" 'ib_logfile='
@@ -152,24 +164,37 @@ let
       runHook postInstall
     '';
 
+    # CCStudio bundles binaries and runtime directories whose layout generic fixups may break.
     dontFixup = true;
   };
 
+  # Configure first-run preferences, the Chromium sandbox, and the display protocol.
   launcher = writeShellScript "ccstudio-launcher" ''
     settingsFile="''${XDG_CONFIG_HOME:-$HOME/.config}/Texas Instruments/CCS/${baseNameOf ccstudio-unwrapped}/0/theia/settings.json"
+    electronArgs=()
     preferenceArgs=()
 
+    # Electron 37 defaults to XWayland, which can swallow keyboard events when used with Fcitx XIM.
+    # Use the native backend and Chromium's Wayland IME support in Wayland sessions.
+    if [[ -n "''${WAYLAND_DISPLAY:-}" ]]; then
+      electronArgs+=(--ozone-platform=wayland --enable-wayland-ime)
+    fi
+
+    # Set the preference only when the user has not already saved it.
     if [[ ! -f "$settingsFile" ]] || \
       ! ${lib.getExe gnugrep} -q '"CCS.update.autoCheckUpdate"[[:space:]]*:' "$settingsFile"; then
       preferenceArgs+=(--set-preference=CCS.update.autoCheckUpdate=false)
     fi
 
+    # Prefer the NixOS SUID Chromium sandbox and otherwise let Electron handle sandboxing.
     if [[ -x /run/wrappers/bin/chromium-sandbox ]]; then
       export CHROME_DEVEL_SANDBOX=/run/wrappers/bin/chromium-sandbox
     fi
-    exec ${ccstudio-unwrapped}/ccs/theia/ccstudio "''${preferenceArgs[@]}" "$@"
+    exec ${ccstudio-unwrapped}/ccs/theia/ccstudio \
+      "''${electronArgs[@]}" "''${preferenceArgs[@]}" "$@"
   '';
 in
+# Provide the FHS runtime, launcher, desktop entry, and debugger udev rules.
 buildFHSEnv {
   inherit pname version;
 
@@ -178,11 +203,13 @@ buildFHSEnv {
   runScript = launcher;
 
   extraInstallCommands = /* bash */ ''
+    # Install the generated desktop entry with the official application icon.
     install -Dm644 ${desktopItem}/share/applications/ccstudio.desktop \
       $out/share/applications/ccstudio.desktop
     install -Dm644 ${ccstudio-unwrapped}/ccs/doc/ccs.png \
       $out/share/icons/hicolor/256x256/apps/ccstudio.png
 
+    # Collect TI, Blackhawk, and J-Link debugger rules for use with services.udev.packages.
     install -Dm644 ${ccstudio-unwrapped}/ccs/install_scripts/71-ti-permissions.rules \
       $out/lib/udev/rules.d/71-ti-permissions.rules
     install -Dm644 ${ccstudio-unwrapped}/ccs/ccs_base/emulation/Blackhawk/Install/71-bh-permissions.rules \
@@ -192,6 +219,8 @@ buildFHSEnv {
     install -Dm644 ${ccstudio-unwrapped}/ccs/install_scripts/99-jlink.rules \
       $out/lib/udev/rules.d/71-jlink.rules
 
+    # Replace world-writable permissions with logind uaccess for the active local session.
+    # Restrict ttyACM rules to the USB vendor IDs commonly used by TI and MSP430 devices.
     substituteInPlace $out/lib/udev/rules.d/71-ti-permissions.rules \
       --replace-fail 'KERNEL=="ttyACM[0-9]*",MODE:="0666"' $'KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="0451", TAG+="uaccess"\nKERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="2047", TAG+="uaccess"' \
       --replace-fail 'MODE:="0666"' 'TAG+="uaccess"' \
