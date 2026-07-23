@@ -38,6 +38,18 @@
       sha256 = "sha256-lJV+ujiSx/IkjLG5UcA54+3ucNscV2KBwOYnIlUMM2s=";
     };
   };
+  danmakufactory = {
+    pname = "danmakufactory";
+    version = "02134bc672729aec85c034af8635de985ae5b65c";
+    src = fetchFromGitHub {
+      owner = "hihkm";
+      repo = "DanmakuFactory";
+      rev = "02134bc672729aec85c034af8635de985ae5b65c";
+      fetchSubmodules = false;
+      sha256 = "sha256-BkYACua7LN/aKHzV05RQWi70Mrlx+6r748S43JD2ftY=";
+    };
+    date = "2026-07-09";
+  };
   dump-tabs = {
     pname = "dump-tabs";
     version = "745e347bcf9a2bec87370a33d4929d07af09f011";

@@ -1,0 +1,26 @@
+diff --git a/xmake.lua b/xmake.lua
+index 22e654f..cb77bc5 100644
+--- a/xmake.lua
++++ b/xmake.lua
+@@ -4,11 +4,6 @@ add_rules("mode.debug", "mode.release")
+ 
+ set_project(PROJECT_NAME)
+ 
+-add_requires("pcre2", {
+-    system = false,
+-    configs = {shared = false}
+-})
+-
+ target("cli")
+     set_basename(PROJECT_NAME)
+     set_kind("binary")
+@@ -17,7 +12,8 @@ target("cli")
+     set_languages("gnu11")
+     set_version("2.0.0", {build = "%Y%m%d%H%M"})
+ 
+-    add_packages("pcre2")
++    add_defines("PCRE2_CODE_UNIT_WIDTH=8")
++    add_syslinks("pcre2-8")
+     add_files("src/*.c", "src/**/*.c")
+ 
+     if is_plat("windows") then

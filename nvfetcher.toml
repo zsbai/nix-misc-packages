@@ -36,6 +36,10 @@ fetch.github = "test482/mpv-bilibili-sponsorblock"
 src.github = "erichll/go-fast-note-sync"
 fetch.github = "erichll/go-fast-note-sync"
 
+[danmakufactory]
+src.git = "https://github.com/hihkm/DanmakuFactory.git"
+fetch.github = "hihkm/DanmakuFactory"
+
 [oroot]
 src.git = "https://github.com/js0ny/oroot.git"
 fetch.git = "https://github.com/js0ny/oroot.git"

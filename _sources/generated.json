@@ -58,6 +58,27 @@
         },
         "version": "0.0.15"
     },
+    "danmakufactory": {
+        "cargoLock": null,
+        "date": "2026-07-09",
+        "extract": null,
+        "name": "danmakufactory",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hihkm",
+            "repo": "DanmakuFactory",
+            "rev": "02134bc672729aec85c034af8635de985ae5b65c",
+            "sha256": "sha256-BkYACua7LN/aKHzV05RQWi70Mrlx+6r748S43JD2ftY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "02134bc672729aec85c034af8635de985ae5b65c"
+    },
     "dump-tabs": {
         "cargoLock": null,
         "date": "2026-07-09",
