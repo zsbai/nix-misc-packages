@@ -11,6 +11,10 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-teKx9u7M2ZQdd7G3xSCqhwjcHRzBzKeBViSl62TRg+g=";
 
+  ldflags = [
+    "-X github.com/komari-monitor/komari-agent/update.CurrentVersion=${finalAttrs.version}"
+  ];
+
   # These integration tests require network access and raw socket permissions.
   # which is not available in Nix Build Sandbox
   checkFlags = [ "-skip=Test(ICMP|TCP|HTTP)Ping" ];
