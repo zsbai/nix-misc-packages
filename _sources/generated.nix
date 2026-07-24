@@ -189,6 +189,30 @@
     };
     date = "2026-07-09";
   };
+  proton-drive-cli-darwin-arm64 = {
+    pname = "proton-drive-cli-darwin-arm64";
+    version = "0.6.0";
+    src = fetchurl {
+      url = "https://proton.me/download/drive/cli/0.6.0/darwin-arm64/proton-drive";
+      sha256 = "sha256-YGqXNrsdvfRbnO1UUsd/Aev0bjKdSUZov9gkIcxT4LA=";
+    };
+  };
+  proton-drive-cli-linux-arm64 = {
+    pname = "proton-drive-cli-linux-arm64";
+    version = "0.6.0";
+    src = fetchurl {
+      url = "https://proton.me/download/drive/cli/0.6.0/linux-arm64/proton-drive";
+      sha256 = "sha256-Wrd0px//Z7WR71aeoZwgvPxbyrOkGXbeKiABglrPrw0=";
+    };
+  };
+  proton-drive-cli-linux-x64 = {
+    pname = "proton-drive-cli-linux-x64";
+    version = "0.6.0";
+    src = fetchurl {
+      url = "https://proton.me/download/drive/cli/0.6.0/linux-x64/proton-drive";
+      sha256 = "sha256-DCaHY7+c9eLRj1zQXnnGPSsmqZamcPXN3KHZz+CgIBI=";
+    };
+  };
   ratune = {
     pname = "ratune";
     version = "v0.15.1";
@@ -244,7 +268,7 @@
     version = "LTS";
     src = fetchurl {
       url = "https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram";
-      sha256 = "sha256-e3Hh2H2tCXG42NPZE0k7/ZOXDli2C7hCqq4ibNYNbv4=";
+      sha256 = "sha256-KAzOrsRfEOlqT9fUCSanjS2qQJyxrULK5NBe9/Ai7vM=";
     };
   };
   rime-lmdg-zh-hant = {

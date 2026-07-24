@@ -313,6 +313,51 @@
         },
         "version": "0b76c1e834cea24cad8e8ad7204db01f970303ce"
     },
+    "proton-drive-cli-darwin-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-drive-cli-darwin-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-YGqXNrsdvfRbnO1UUsd/Aev0bjKdSUZov9gkIcxT4LA=",
+            "type": "url",
+            "url": "https://proton.me/download/drive/cli/0.6.0/darwin-arm64/proton-drive"
+        },
+        "version": "0.6.0"
+    },
+    "proton-drive-cli-linux-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-drive-cli-linux-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Wrd0px//Z7WR71aeoZwgvPxbyrOkGXbeKiABglrPrw0=",
+            "type": "url",
+            "url": "https://proton.me/download/drive/cli/0.6.0/linux-arm64/proton-drive"
+        },
+        "version": "0.6.0"
+    },
+    "proton-drive-cli-linux-x64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "proton-drive-cli-linux-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-DCaHY7+c9eLRj1zQXnnGPSsmqZamcPXN3KHZz+CgIBI=",
+            "type": "url",
+            "url": "https://proton.me/download/drive/cli/0.6.0/linux-x64/proton-drive"
+        },
+        "version": "0.6.0"
+    },
     "ratune": {
         "cargoLock": null,
         "date": null,
@@ -404,7 +449,7 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-e3Hh2H2tCXG42NPZE0k7/ZOXDli2C7hCqq4ibNYNbv4=",
+            "sha256": "sha256-KAzOrsRfEOlqT9fUCSanjS2qQJyxrULK5NBe9/Ai7vM=",
             "type": "url",
             "url": "https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram"
         },

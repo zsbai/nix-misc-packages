@@ -110,3 +110,19 @@ fetch.force = true
 src.manual = "LTS"
 fetch.url = "https://github.com/amzxyz/RIME-LMDG/releases/download/$ver/wanxiang-lts-zh-hant.gram"
 fetch.force = true
+
+[proton-drive-cli-linux-x64]
+src.webpage = "https://proton.me/download/drive/cli/index.html"
+src.regex = "drive/cli/([0-9.]+)"
+fetch.url = "https://proton.me/download/drive/cli/$ver/linux-x64/proton-drive"
+
+[proton-drive-cli-linux-arm64]
+src.webpage = "https://proton.me/download/drive/cli/index.html"
+src.regex = "drive/cli/([0-9.]+)"
+fetch.url = "https://proton.me/download/drive/cli/$ver/linux-arm64/proton-drive"
+
+
+[proton-drive-cli-darwin-arm64]
+src.webpage = "https://proton.me/download/drive/cli/index.html"
+src.regex = "drive/cli/([0-9.]+)"
+fetch.url = "https://proton.me/download/drive/cli/$ver/darwin-arm64/proton-drive"
